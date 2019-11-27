@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "digital-resistance",
+			"path": "."
+		},
+		{
+			"name": "digital-resistance -> frontend",
+			"path": "frontend"
+		},
+		{
+			"name": "digital-resistance -> api",
+			"path": "api"
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"specialities",
+			"speciality"
+		]
+	}
+}

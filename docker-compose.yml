@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:10-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: digital_resistance
+      POSTGRES_USER: digital_resistance
+      POSTGRES_PASSWORD: p4ssw0rd
+    volumes:
+      - database:/var/lib/postgresql/data
+    ports:
+      - 55432:5432
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend/.
+      dockerfile: production/Dockerfile
+    environment:
+      REACT_APP_API_URL: http://localhost:3001
+    ports:
+      - 8080:80
+volumes:
+  database:
+    driver: local

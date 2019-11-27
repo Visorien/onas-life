@@ -1,0 +1,19 @@
+.dashboard-page-background {
+    background-image: url(https://vitaly-rudenko.github.io/digital-resistance/images/background.jpg);
+    background-size: cover;
+
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    animation: fade-in 0.3s;
+}
+
+.dashboard-page .group-list {
+    animation: fade-in 0.3s;
+}

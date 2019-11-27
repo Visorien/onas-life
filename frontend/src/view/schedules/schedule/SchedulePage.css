@@ -1,0 +1,15 @@
+.schedule-page > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.schedule__table {
+    background-color: white;
+}
+
+.dark-mode .schedule__table {
+    background-color: #f9f9f9;
+}
+
+.dark-mode .schedule-page__edit-mode-checkbox {
+    color: white;
+}

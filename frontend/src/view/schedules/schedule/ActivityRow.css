@@ -1,0 +1,52 @@
+.schedule__activity-row {
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.schedule__activity-row--first-index {
+    border-top: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.schedule__activity-cell {
+    width: 400px;
+}
+
+.schedule__activity-cell--week-even {
+    background-color: #f6fcff;
+}
+
+.schedule__activity-cell--week-odd {
+    background-color: #fff8f8;
+}
+
+.schedule__activity-cell--week-custom {
+    background-color: #f8fff8;
+}
+
+.schedule__activity {
+    display: flex;
+    text-align: left;
+}
+
+.schedule__activity > *:not(:last-child) {
+    margin-right: 10px;
+}
+
+.schedule__activity__info > p {
+    margin-bottom: 5px;
+}
+
+.schedule__activity__info {
+    flex: 1 1 0;
+}
+
+.schedule__activity__subject {
+    font-weight: bold;
+}
+
+.schedule__activity__place {
+    font-style: italic;
+}
+
+.schedule__activity__actions {
+    flex: 0 0 auto;
+}

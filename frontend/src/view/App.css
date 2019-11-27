@@ -1,0 +1,50 @@
+#root {
+    transition: background-color 0.3s;
+}
+
+#root.dark-mode {
+    background-color: #414141;
+}
+
+.app {
+    display: flex;
+    position: relative;
+
+    padding: 40px;
+    min-height: 100vh;
+
+    animation: fade-in 0.3s;
+}
+
+.app__content {
+    flex-grow: 1;
+    padding-left: 40px;
+}
+
+.sidebar-wrapper .sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 820px) {
+    .app {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar-wrapper .sidebar {
+        position: unset;
+        top: unset;
+    }
+
+    .app__content {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+}

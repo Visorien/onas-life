@@ -1,0 +1,10 @@
+.schedule__activity__form {
+    flex: 0 1 auto;
+    width: 100%;
+}
+
+.schedule__activity__form__unfold-button {
+    width: 100%;
+    background-color: white;
+    color: #505050;
+}

@@ -1,0 +1,58 @@
+{
+  "name": "digital-resistance-api",
+  "version": "1.6.0",
+  "description": "Digital deanery",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "cd .. && git subtree push --prefix api origin heroku-deploy",
+    "umzug-prod": "node ./umzug/cli.js",
+    "start": "npm run umzug-prod db:migrate && node --experimental-modules --es-module-specifier-resolution=node app.js",
+    "debug": "npm run umzug db:migrate:check && nodemon",
+    "umzug": "node -r dotenv/config ./umzug/cli.js",
+    "test": "mocha"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".git",
+      "test",
+      "migrations"
+    ],
+    "exec": "node -r dotenv/config --experimental-modules --es-module-specifier-resolution=node --inspect=0.0.0.0:5858 --nolazy app.js",
+    "signal": "SIGTERM",
+    "ext": "js",
+    "legacyWatch": "true",
+    "delay": "500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitaly-Rudenko/digital-resistance.git"
+  },
+  "keywords": [
+    "digital",
+    "deanery"
+  ],
+  "author": "Vitaly Rudenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitaly-Rudenko/digital-resistance/issues"
+  },
+  "homepage": "https://github.com/Vitaly-Rudenko/digital-resistance#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "log4js": "^5.1.0",
+    "pg": "^7.11.0",
+    "umzug": "^2.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "express-print-routes": "^1.0.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "12.4.0"
+  }
+}

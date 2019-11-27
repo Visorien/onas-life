@@ -1,0 +1,2705 @@
+{
+	"info": {
+		"name": "ONPU Life",
+		"_postman_id": "2d1d8c98-4648-3530-3af1-29cdba2fcff5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get OAuth access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "xgwTGkrmHEF1FbtbrctGkOGpfXU6mkS9MPVSu6vk",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "example@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "onpulife4ever",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/oauth/token",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "3b37ddf6-6176-4e08-b144-3f56e177fe8f",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "xgwTGkrmHEF1FbtbrctGkOGpfXU6mkS9MPVSu6vk",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "example@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "onpulife4ever",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/oauth/token",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-store, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1857",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:00:26 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						}
+					],
+					"cookie": [],
+					"responseTime": "656",
+					"body": "{\"token_type\":\"Bearer\",\"expires_in\":604800,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljNTJjMDEyNWQ5MTg1YTU3Nzk1MWM4MzlhNDAzYmQ5NjE1N2M0OWRjZjU3YWQzMGYwYjllZjJiOGNiYzYyODA1NjBhNTg3ZWE2NzdjZDA4In0.eyJhdWQiOiIyIiwianRpIjoiOWM1MmMwMTI1ZDkxODVhNTc3OTUxYzgzOWE0MDNiZDk2MTU3YzQ5ZGNmNTdhZDMwZjBiOWVmMmI4Y2JjNjI4MDU2MGE1ODdlYTY3N2NkMDgiLCJpYXQiOjE1MTA2OTY4MjYsIm5iZiI6MTUxMDY5NjgyNiwiZXhwIjoxNTExMzAxNjI2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.s2ZOz9X6znKQcfW8VtOLsEMv-YKxVU3-DtyZABdAIMzn_f2G0hfc7AlTwyDQxCcHXdjiyIgTGCwKepwUA893qC1ZLGUuvOQn80P_OXHiCj8gwp-vTSvIo2ABX_j9c1XvFpUs4VO_2tZYDK0nt2xyxc9EmHVRMBCMqa-iKqpVDlMmlVt3Fd4zs0L-6rHKSBp_tdhOU2fx689AccxwMwBMJS4I-imEMeJLbZDlxZTQYEnZNCMwSRP8kV7MEif3DMTyxWJdWuckcsk2BAPmiQVxwiDET0KSJo0g2-pQSB8dDqO_Gs3zQpGHUWAouZH6PNttigtMaCgrB8Qknf98vm687KNDAf3Nz1U5v4JieHzz6bUS5NGrMCKcBcy5s-KOOPF8qjXKa50sTl-M7-JiCgX--g1FkT-n3DtKYY_d01D3ut9uCcKfmrEHVF2ih8UBVMSqlr7U4lcIRCJh8G_UqCbvmo4hPC62ib15VpClg_8R6MGUhChSRtJVltOy1NVbxYDFRxGH6WDTDgmvevJLE8R-8o_60XfBmK2PyW2vRSldp5oEPSRXqzYutECbjKdhWPwpp0apSb_qcbaZpKg2u55Kew5BHYGjSsEt9DYpDWhpjdV9Glv-2mKzGltRJSW9VCpsl4o8oJLk3WegedG_eIPlrtZKjYcN1uJgFnBYHNhIkm0\",\"refresh_token\":\"def50200059813dd3eb2c750c969922e6fa82f4f36c89480b6d6667eb01a11338464c469b5061e396479a3a0a9711b5d3e79be3cf790ce64ff39eff1c539b4698ef2aafdb34e78d3dfb6518ec20d137f60cbbc573786f8dacf8c8011d5adacaaf935158cb2f47d1f0bbbb7772983d199368ce7f22ba710171ba2fb8c2aa85b100b1e761417b5be630ccb4cb8c45cafd0b7e5ec034e36f5614a66faaee8dac198c9a2319bb05e89fb8237dd226e4a2a3a16246aa8a786f34256a0887fdc24a1185d1bed7333382f18b2cd0dad6a3f3f791e8e4a403146d73989eff77286d42f2ebc8688877239d029ab8f232c5b08e87eb064cbcdadca6f19fedf4509fe0d2e4585970a3d072f83853774c9e275d2bde31a913dc258c47b5e6a0e365aac7c4787c8939bcbd2e18540761ddceb1bbf22fa2f825f134de162537f280ee08eaab1fa5bbd7774b6fd1de073b93fc138bd03b2cb04739b0b80e08585e5d48b6ab5648a40\"}"
+				}
+			]
+		},
+		{
+			"name": "Refresh OAuth access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "def50200ecde9f9d22b87a9d2e2a9d91595576f1b1c157a8fd9505e532a86b5b110fdd0618085e41da81ec501f843f65be93172eeea455f8aa8ee319f7892f38c178f02b6368fb985b437ba1e3ad97cd56ff95546a84ee3f35324b650e191b03d077fe788703ef0ec985e25c2ebdff584a6abec9d783c04b659a40e33e91a6058db0c7713de84104a350fd14d029dfd7c648bd153ae58304a39bfafc51b41b759d1049e74887c65019068791912488f1453bb07738557f5ac0ea456d70cba5460d06d2d1a827238f9f1f2befe2364eb0afe54b11d9a7a4528ebe3b3f338f68ae090cf3f98b771f9e10bf7fda855d896b5d1e0e4c8abf2afd754f65dcd946e1b10cd4f442a48b90c14babf6feb5c4176bf7427ba449b9b1ce71bbea4f7f94ed22b04ad7a85ea7748493c30014dcbf6cfd7c6e28129398afbbbb614202cedee854a040eb151b81b392262c7b7281a738565318a5e4a49d905cfbec3097bf6e7089e6",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "xgwTGkrmHEF1FbtbrctGkOGpfXU6mkS9MPVSu6vk",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/oauth/token",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "366244de-f98f-43e2-bc25-491c639ef74b",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "def50200ecde9f9d22b87a9d2e2a9d91595576f1b1c157a8fd9505e532a86b5b110fdd0618085e41da81ec501f843f65be93172eeea455f8aa8ee319f7892f38c178f02b6368fb985b437ba1e3ad97cd56ff95546a84ee3f35324b650e191b03d077fe788703ef0ec985e25c2ebdff584a6abec9d783c04b659a40e33e91a6058db0c7713de84104a350fd14d029dfd7c648bd153ae58304a39bfafc51b41b759d1049e74887c65019068791912488f1453bb07738557f5ac0ea456d70cba5460d06d2d1a827238f9f1f2befe2364eb0afe54b11d9a7a4528ebe3b3f338f68ae090cf3f98b771f9e10bf7fda855d896b5d1e0e4c8abf2afd754f65dcd946e1b10cd4f442a48b90c14babf6feb5c4176bf7427ba449b9b1ce71bbea4f7f94ed22b04ad7a85ea7748493c30014dcbf6cfd7c6e28129398afbbbb614202cedee854a040eb151b81b392262c7b7281a738565318a5e4a49d905cfbec3097bf6e7089e6",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "xgwTGkrmHEF1FbtbrctGkOGpfXU6mkS9MPVSu6vk",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/oauth/token",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-store, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1857",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:00:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						}
+					],
+					"cookie": [],
+					"responseTime": "892",
+					"body": "{\"token_type\":\"Bearer\",\"expires_in\":604800,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZiYjFkYTc5NDUyMTJkZWE3Njg4OGQ1ZTgzOTU0OGNiOGI2Njk2YzNmMzc4Y2MzMjZhNDQzM2Q5YWQwYzgxM2Y3NzA3YTk5MTQ4ZjhiYmFmIn0.eyJhdWQiOiIyIiwianRpIjoiZmJiMWRhNzk0NTIxMmRlYTc2ODg4ZDVlODM5NTQ4Y2I4YjY2OTZjM2YzNzhjYzMyNmE0NDMzZDlhZDBjODEzZjc3MDdhOTkxNDhmOGJiYWYiLCJpYXQiOjE1MTA2OTY4NTksIm5iZiI6MTUxMDY5Njg1OSwiZXhwIjoxNTExMzAxNjU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.sOV3xnnreT1aUbb-PFTOdyQUQzJ6z-bu__OmcDakmNpz8kwjXclKhNQg8fZNcmuQgXOSRZ8g7UnsfE5AkN3d8mMPDVbH9FPTr0s5Y1tfcl2nfYrCD_kgOQX_CUUbKqSApYidQhMPm3Z4ZndrDDnwCqrOfLBvtcv5SmgKQUyvnb7YORW1yUxTdC-oXkbpsZtKSA_glM_MTmILhxor7_h_Vm7mvDzv1ZmMSh77dIRtzr2BGxrWUPLsRl6VPwyzHKnEhrXVRKIkr_MuJhLyeiMfJLLSuAiT3lf67OxkoUZJNIzQAmnG6mp_uSeEg-z37DTzCAC9_aYHTlvYYCgLgmHYFxU_U0LsFBY30B1b5jS5XYYEIbiT6GkSYfKANDs7TKejr0hWlsdtmCV_O58lJNNTp-5Y-LJr-REzROX5vItPkO2c3G4me3E1Kpe3Q8wpiD4_TsJHyiGFPv__HMi6dJsaqvAjgV174H30kVZexkuxu0dPzguTuZSHN7-cEH2xt691vTVHwOPBRPdkffuGAL0pEYq0WOrXc_SuOPwcrSDViKPLuci9uDBYxvbAyWi4THMtNaCiLbr3VOYKskq7MPU90IJ2w1_-s6spPzqagnrUMwh20RAVuFbE9Dllk18kQAYENFdw4ogIHwMD0zR9FACP2IcLYtybCYBfRqEWOCAXflY\",\"refresh_token\":\"def5020083f84ed6bc88a734be36b4711f453d1eedd9b96051be7621eb1adc1a867ea2989a9a3d818d4f4656dd71893b46384f6c81e0cdfb3983efb521711d520e21993d269b1bc126985fb9d860bbe00a2c8d89bfe2b99e0837966fea76063d04b597e12db21e651872bfb50bf96196efe2d248245f1ef0c43a43c05e34fcd4ea24d3a2d1b7175ac9fb102bb87889d7e13e8b09397ba012e544a4c4de92a1638e7e45512e9b34ffb11595d7006afae1ea01888c37c8facead677c54425b5aaeeab5a69ab5207ff3493547a0597bd5bd3bda1d1f400ed17fd2633f6f2881bc94a117d7e72cc55f57b088430e14e5f6a7fc62c75735ac8f51a2aa8d859126f9585c121abc22903f100f004373025c58602852f8ff0a7f79d21fa4136d6fcd459600189ddedcfd56da4cfb1042785090fec62d9151dbc7f2dc847e939d874a10b76a551b4228415a8c95288dbce104f736e7ccc59e64ed8da5cd8bf33e62374bc303\"}"
+				}
+			]
+		},
+		{
+			"name": "Get user info",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "9c841390-99c2-47c4-bff7-b9530ea16800",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:01:34 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "274",
+					"body": "{\"status\":true,\"user\":{\"id\":1,\"email\":\"example@mail.com\",\"userable_type\":\"student\",\"userable\":{\"first_name\":\"\\u0410\\u043d\\u0442\\u043e\\u043d\",\"last_name\":\"\\u041e\\u0441\\u0430\\u0442\\u044e\\u043a\",\"group\":{\"name\":\"\\u0410\\u0418-153\"}}}}"
+				}
+			]
+		},
+		{
+			"name": "Edit user email",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNmNzk2NTFkYjhmMmUzYzdjNmNmZjdjNGY5YjRiOTAxYjVmZTU3ZjgzNzZjNGVhYzQ2OWJkNDNhNjVlYzYwYjNkYThkYzVmNDFlMmIyOTgyIn0.eyJhdWQiOiIyIiwianRpIjoiY2Y3OTY1MWRiOGYyZTNjN2M2Y2ZmN2M0ZjliNGI5MDFiNWZlNTdmODM3NmM0ZWFjNDY5YmQ0M2E2NWVjNjBiM2RhOGRjNWY0MWUyYjI5ODIiLCJpYXQiOjE1NDg3NzY1MDQsIm5iZiI6MTU0ODc3NjUwNCwiZXhwIjoxNTQ5MzgxMzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.WA96UGgWLUe-PBiTl9Ku9XwndsGQE7aqXAsLHdTpLOYiy5dVWlGkVe28iWc6KRyrRqO0ckZq7jtspWwgx9Pk885r5HAt5iU3G4rsglT0OnWMbidfZLY61aWSF5hlRnAVAgYo-EvMsI14Mvbqc3iWM00Ld3ZfLbF22MhdwtnxgtkN3RW71y4TnO9e_zdyzWKgMghd0zcmdlonmvgUYVjpgabqolZyJkej-iMkHQ43amwEzH_t-25ZbZR-KJxWuPiTox-oTbLV-AhFdcDvlSgWDDrvvm0sFvEAcdWmz4Dss-Tw-7cUM-JHAUm39_GoXPUDCYrnc3MkgNJoU1cUOvY_T5b0SmSmw7kB9FgvxRdFLK_J92ENpKOypakzoZuy37uvYYeDHN81nHXOK7vbXIx5CJtX7Wm0lu7pHDMXdxyU5GZSXafvokkubqRi2mNDK6fG4kaBbDA7j6rGpxvAHSC0XStnbAFeOndDInCGyGSvX1xtSeK-qXGtLzxm081f8fBBsL-QpBSL0Rqew3T58I2p9nc5Xl2WzZs1v-e60_i1EPFl23WJuUMh_akcqR7nDcQViqTA85JzdCCput09ptMU1t7ZjNUoFEAWuVm7RM3QvxfNZJNLWRNDvWlyiQS4BM1mFqwrkA3MbvBIMRxURIZVowEAJEE9eczQmbeNYgLMUO0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "a@a.a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/user/email",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"email"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "fdd6ed2c-c2e5-44df-b66e-0d734c8e1241",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "example1@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/user/email",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"email"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:02:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "276",
+					"body": "{\"status\":true,\"message\":\"Email was successfully updated\"}"
+				}
+			]
+		},
+		{
+			"name": "Edit user password",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU2NTRhMGFhNmMyNzYwMWE2MGRjOTE0NDkxMmQ0MjAxOTY0NmQ3MjBmYWIyZDU1MDJmZDQ3ZjI1NzZmZjMwMTQ5MjllMmRmOTVkYTAzNDFiIn0.eyJhdWQiOiIyIiwianRpIjoiNTY1NGEwYWE2YzI3NjAxYTYwZGM5MTQ0OTEyZDQyMDE5NjQ2ZDcyMGZhYjJkNTUwMmZkNDdmMjU3NmZmMzAxNDkyOWUyZGY5NWRhMDM0MWIiLCJpYXQiOjE1MTA2OTYwMTIsIm5iZiI6MTUxMDY5NjAxMiwiZXhwIjoxNTExMzAwODEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.MhqUeWTtD8W_kLtD7dyZYa7G4ZlWGSTK0RuJaEkcqOi1cdVecyjqiW6HiUqHTxIIu1Oin0ts_g7n-LLCu2tTjRRRg7YGLgECToZtLynnNnKttOqwGZuNZJUbvzIjRRWbNK_y3_v6Hkv_zJl8w-Wz-Zjp5A1KP1sz77Co8EltYR9t4P9lRKOU1mZt1MR3r6JKcEN7weAh5sv4uk6qsRYS57-2F3ZauQj4VDSgteXksIkfKIVh1BQMx9-f2tc9777mNXHc-q-yRFR_XmNW0MxUFQQW-Y816lqIjLLhAIEdTbVXultOSrRIMVQeaKT9pAmj_OjtED8ZGoeYjrpDBPJgyVjlcbGRNmCdjpH53rXu0A1G5TOoQE6swRltMwJgw-N6XVoSB4zrA06xlq0OVKkVzLs9JEM5SUxud1-7Pt9FzkqsY_fZVwZziI4V1ISFZQ62BVuv88lZ6EP_-ysfg7ADBne1TA7bQyr-PY4eoHbN75xZ6aAAzwEZbtzXy0yfGIjW8cZfCpbEMJiVmoDaUGRnsSHWVSFDuKkyVEN2d-z2gjCuYQp24nXtPE-8AVQyGFQPomktzHOyMxGZQ3fTUt1KneOmechcUPcgAzHZ3XtVxJ130aLPdIgHWHNTaAUIqiRqTicFcm07MOZ-krJE5Ohbn9TjzlccfMUevQ4zcxXbBt8",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old_password",
+							"value": "onpulife4ever",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "onpulife4ever",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "onpulife4ever",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/user/password",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"password"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "565acae3-33a6-4800-bf05-3904c3c587aa",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "onpulife4ever",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "onpulife4ever",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "onpulife4ever",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/user/password",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:03:26 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "450",
+					"body": "{\"status\":true,\"message\":\"Password was successfully updated\"}"
+				}
+			]
+		},
+		{
+			"name": "Get user's schedule",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/user/schedule/5",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"schedule",
+						"5"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "3854c7b5-b366-4c78-a60f-e688050ee3d1",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/user/schedule/3",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"schedule",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2493",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:10:08 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "275",
+					"body": "{\"status\":true,\"schedule\":{\"1\":{\"subject_id\":2,\"room\":\"606\\u0444\",\"lesson_type\":\"\\u041f\\u0440\\u0430\\u043a\\u0442\\u0438\\u043a\\u0430\",\"subject_name\":\"\\u041c\\u0430\\u0442\\u0435\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0435 \\u043c\\u0435\\u0442\\u043e\\u0434\\u044b \\u0438\\u0441\\u0441\\u043b\\u0435\\u0434\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0439\",\"teachers\":[{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0435\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0411\\u043e\\u043b\\u0442\\u0435\\u043d\\u043a\\u043e\\u0432\"},{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"}]},\"2\":{\"subject_id\":6,\"room\":\"309\\u0444\",\"lesson_type\":\"\\u041b\\u0435\\u043a\\u0446\\u0438\\u044f\",\"subject_name\":\"\\u0426\\u0438\\u0444\\u0440\\u043e\\u0432\\u0430\\u044f \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0430 \\u0441\\u0438\\u0433\\u043d\\u0430\\u043b\\u043e\\u0432\",\"teachers\":[{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"},{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0430\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041a\\u0440\\u044b\\u043b\\u043e\\u0432\"},{\"first_name\":\"\\u042e\\u043b\\u0438\\u044f\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041b\\u0430\\u043f\\u0442\\u0435\\u0432\\u0430\"}]},\"3\":{\"subject_id\":6,\"room\":\"609\\u0444\",\"lesson_type\":\"\\u041b\\u0430\\u0431\\u043e\\u0440\\u0430\\u0442\\u043e\\u0440\\u043d\\u0430\\u044f\",\"subject_name\":\"\\u0426\\u0438\\u0444\\u0440\\u043e\\u0432\\u0430\\u044f \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0430 \\u0441\\u0438\\u0433\\u043d\\u0430\\u043b\\u043e\\u0432\",\"teachers\":[{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"},{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0430\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041a\\u0440\\u044b\\u043b\\u043e\\u0432\"},{\"first_name\":\"\\u042e\\u043b\\u0438\\u044f\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041b\\u0430\\u043f\\u0442\\u0435\\u0432\\u0430\"}]}}}"
+				}
+			]
+		},
+		{
+			"name": "Get user's subjects",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYxZTFiMThjODdlYjFlN2Q3Mjg2ZDA1ZmI2NDFhYTJmMTJmMWNjZWIzNzc4YmI5NDcyMmQ1ZTljZTZkYjY0ZjMyZGYzYWIzMTNlMDhhZjU0In0.eyJhdWQiOiIyIiwianRpIjoiZjFlMWIxOGM4N2ViMWU3ZDcyODZkMDVmYjY0MWFhMmYxMmYxY2NlYjM3NzhiYjk0NzIyZDVlOWNlNmRiNjRmMzJkZjNhYjMxM2UwOGFmNTQiLCJpYXQiOjE1NDg3ODc3MDAsIm5iZiI6MTU0ODc4NzcwMCwiZXhwIjoxNTQ5MzkyNTAwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.xLz892E2IHKKqPuad6xFNyMw6nuOWsCrELVszQgPuaNq-3qbGsF90Nw4zrG6DjJWCNbjwK5dsmiaQEXJvHMJLKuzef4uw1rqyefdUQdbT5sTAo9IiEi7Jo8w_XszIY63o1E_DWFk3T_DV25a0SjuSEF3sTfuS4gOcR_E0wEthkvnwpAeJ8xcvOPKlfGw5uSald7yVTIahCi3so0fzl84Oba87OFM-doM19YHQEs8v24XE_jrpXcnBGENFPLsnyIvbfLAEeRUV6Wv9M2f-MTaD3pNi6eKn-iDRA-w2BAHC17iyQsAZZrmsm_kH4UGQcF0bgzNRf0Q4_S6JX34bH7MZgcPJVdiBhp7JT3xzteiIyz_j_-IB3Xn3H-MGgTZeI2AaHPrUXeWTuSzZ_rzqU-iIzMPzAi9oFldjNK2V1BZn_4KB-bvbJb-M2v9R-HGT6KZQtF9f7IuPt2sY0sxhdwyLsyNaRZ6kIlJKEIr6OD8nAS80FMKxf9PTUJTjtPZlrA3xEQmOVxjgiJpQwE5e9hIce-sayQ8gfAqJm2ee2YS5KblM5OT9qk449BgY4mFaBsq5Stup2hTk6yExVvrXQSB1QAOH2AU_X-lXt_OY5wpeY2VHd2_HjXjsYU2dhHxV42ceiuvoomdpuFLI1IVIVdVwNe_xmhIp63Lbw_oIGH4H5w",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/user/subjects",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"subjects"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "f32b4f0c-b194-4d02-a553-2b6dd3196d45",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/user/subjects",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"subjects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4815",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:11:13 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "315",
+					"body": "{\"status\":true,\"subjects\":[{\"name\":\"\\u0422\\u0435\\u0445\\u043d\\u043e\\u043b\\u043e\\u0433\\u0438\\u0438 \\u0441\\u043e\\u0437\\u0434\\u0430\\u043d\\u0438\\u044f \\u043f\\u0440\\u043e\\u0433\\u0440\\u0430\\u043c\\u043c\\u043d\\u044b\\u0445 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u043e\\u0432\",\"exam_form\":\"\\u042d\\u043a\\u0437\\u0430\\u043c\\u0435\\u043d\",\"teachers\":[{\"first_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\",\"second_name\":\"\\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041c\\u0430\\u043a\\u043e\\u0432\\u0435\\u0446\\u043a\\u0438\\u0439\"}]},{\"name\":\"\\u041c\\u0430\\u0442\\u0435\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0435 \\u043c\\u0435\\u0442\\u043e\\u0434\\u044b \\u0438\\u0441\\u0441\\u043b\\u0435\\u0434\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0439\",\"exam_form\":\"\\u0417\\u0430\\u0447\\u0451\\u0442\",\"teachers\":[{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0435\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0411\\u043e\\u043b\\u0442\\u0435\\u043d\\u043a\\u043e\\u0432\"},{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"}]},{\"name\":\"\\u041e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u044f \\u0431\\u0430\\u0437 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445 \\u0438 \\u0437\\u043d\\u0430\\u043d\\u0438\\u0439\",\"exam_form\":\"\\u042d\\u043a\\u0437\\u0430\\u043c\\u0435\\u043d\",\"teachers\":[{\"first_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0430\\u0439\",\"second_name\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0411\\u0430\\u0431\\u0438\\u0447\"},{\"first_name\":\"\\u041c\\u0438\\u0440\\u043e\\u0441\\u043b\\u0430\\u0432\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0414\\u0440\\u043e\\u0437\\u0434\"}]},{\"name\":\"\\u0418\\u043d\\u0442\\u0435\\u043b\\u043b\\u0435\\u043a\\u0442\\u0443\\u0430\\u043b\\u044c\\u043d\\u044b\\u0439 \\u0430\\u043d\\u0430\\u043b\\u0438\\u0437 \\u0434\\u0430\\u043d\\u043d\\u044b\\u0445\",\"exam_form\":\"\\u042d\\u043a\\u0437\\u0430\\u043c\\u0435\\u043d\",\"teachers\":[{\"first_name\":\"\\u0421\\u0432\\u0435\\u0442\\u043b\\u0430\\u043d\\u0430\",\"second_name\":\"\\u0413\\u0440\\u0438\\u0433\\u043e\\u0440\\u044c\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u0410\\u043d\\u0442\\u043e\\u0449\\u0443\\u043a\"},{\"first_name\":\"\\u0410\\u043d\\u0430\\u0442\\u043e\\u043b\\u0438\\u0439\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0435\\u043d\\u043a\\u043e\"}]},{\"name\":\"\\u0421\\u043e\\u0446\\u0438\\u043e\\u043b\\u043e\\u0433\\u0438\\u044f\",\"exam_form\":\"\\u0417\\u0430\\u0447\\u0451\\u0442\",\"teachers\":[{\"first_name\":\"\\u0422\\u0430\\u0442\\u044c\\u044f\\u043d\\u0430\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u043d\\u0430\",\"last_name\":\"\\u0421\\u0435\\u0432\\u0435\\u0440\\u0438\\u043d\\u044e\\u043a\"},{\"first_name\":\"\\u042e\\u043b\\u0438\\u044f\",\"second_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\\u043e\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u043e\\u043b\\u043e\\u0434\\u0438\\u0439\\u0447\\u0443\\u043a\"}]},{\"name\":\"\\u0426\\u0438\\u0444\\u0440\\u043e\\u0432\\u0430\\u044f \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0430 \\u0441\\u0438\\u0433\\u043d\\u0430\\u043b\\u043e\\u0432\",\"exam_form\":\"\\u0417\\u0430\\u0447\\u0451\\u0442\",\"teachers\":[{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"},{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0430\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041a\\u0440\\u044b\\u043b\\u043e\\u0432\"},{\"first_name\":\"\\u042e\\u043b\\u0438\\u044f\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041b\\u0430\\u043f\\u0442\\u0435\\u0432\\u0430\"}]},{\"name\":\"\\u041a\\u043e\\u043c\\u043f\\u044c\\u044e\\u0442\\u0435\\u0440\\u043d\\u044b\\u0435 \\u0441\\u0435\\u0442\\u0438\",\"exam_form\":\"\\u042d\\u043a\\u0437\\u0430\\u043c\\u0435\\u043d\",\"teachers\":[{\"first_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\",\"second_name\":\"\\u0418\\u0432\\u0430\\u043d\\u043e\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041d\\u0435\\u0432\\u0440\\u0435\\u0432\"},{\"first_name\":\"\\u0410\\u043d\\u0430\\u0442\\u043e\\u043b\\u0438\\u0439\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0430\\u043d\\u0434\\u0440\\u043e\\u0432\\u0438\\u0447\",\"last_name\":\"\\u041d\\u0438\\u043a\\u043e\\u043b\\u0435\\u043d\\u043a\\u043e\"}]},{\"name\":\"\\u0424\\u0438\\u0437\\u043a\\u0443\\u043b\\u044c\\u0442\\u0443\\u0440\\u0430\",\"exam_form\":\"\\u0417\\u0430\\u0447\\u0451\\u0442\",\"teachers\":[{\"first_name\":\"\\u0420\\u0443\\u0441\\u043b\\u0430\\u043d\",\"second_name\":\"\\u0421\\u0435\\u0440\\u0433\\u0435\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0420\\u0438\\u0441\\u0441\\u043b\\u0438\\u043d\\u0433\"}]}]}"
+				}
+			]
+		},
+		{
+			"name": "Get subject by id",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "40113417-230e-4708-b915-382d838d0d22",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "734",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:11:44 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "322",
+					"body": "{\"status\":true,\"subject\":{\"name\":\"\\u041c\\u0430\\u0442\\u0435\\u043c\\u0430\\u0442\\u0438\\u0447\\u0435\\u0441\\u043a\\u0438\\u0435 \\u043c\\u0435\\u0442\\u043e\\u0434\\u044b \\u0438\\u0441\\u0441\\u043b\\u0435\\u0434\\u043e\\u0432\\u0430\\u043d\\u0438\\u044f \\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u0439\",\"exam_form\":\"\\u0417\\u0430\\u0447\\u0451\\u0442\",\"messages\":[],\"teachers\":[{\"first_name\":\"\\u0412\\u0438\\u043a\\u0442\\u043e\\u0440\",\"second_name\":\"\\u0410\\u043b\\u0435\\u043a\\u0441\\u0435\\u0435\\u0432\\u0438\\u0447\",\"last_name\":\"\\u0411\\u043e\\u043b\\u0442\\u0435\\u043d\\u043a\\u043e\\u0432\"},{\"first_name\":\"\\u0412\\u0430\\u0440\\u0432\\u0430\\u0440\\u0430\",\"second_name\":\"\\u0418\\u0433\\u043e\\u0440\\u0435\\u0432\\u043d\\u0430\",\"last_name\":\"\\u041a\\u0443\\u0432\\u0430\\u0435\\u0432\\u0430\"}]}}"
+				}
+			]
+		},
+		{
+			"name": "Add message to subject's page",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Я наглых не люблю - я их гноблю.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5/message",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5",
+						"message"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "03bf51e0-6c41-4f99-90ef-46252999dd43",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "Чикчикпукпук.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/message",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"message"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:13:36 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "283",
+					"body": "{\"status\":true,\"message\":\"Message was successfully added\"}"
+				}
+			]
+		},
+		{
+			"name": "Delete message from subject's page",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5/message/67",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5",
+						"message",
+						"67"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "f9ab5336-dc58-4ca0-84f0-5cdd6a690973",
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/message/1",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"message",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:15:45 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "304",
+					"body": "{\"status\":true,\"message\":\"Message was successfully deleted\"}"
+				}
+			]
+		},
+		{
+			"name": "Get subject's files",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5/files",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5",
+						"files"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "2d3265bb-87b4-45d1-88c8-199d20c3a1c4",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/files",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"files"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:17:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=99",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "209",
+					"body": "{\"status\":true,\"files\":[{\"id\":1,\"name\":\"0CI8tyDpY4M.jpg\"}]}"
+				}
+			]
+		},
+		{
+			"name": "Add new file",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5/file",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5",
+						"file"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "b0058341-87e4-43ae-817a-338ccdbb23a9",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": {
+										"0": {}
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/file",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"file"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:17:22 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=99",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "561",
+					"body": "{\"status\":true,\"message\":\"File was successfully added\"}"
+				}
+			]
+		},
+		{
+			"name": "Edit file name",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjOWJhMzc5ZTEwMjU3MDVkM2Q2ZTFjZDU5MTAxZDUwOWY0OTJkMWEyMDM2NzRhYjNiYjA0YWRkZDhkY2NhZTE2MGUwNjVhOTFhMjM2ZjZlIn0.eyJhdWQiOiIyIiwianRpIjoiNGM5YmEzNzllMTAyNTcwNWQzZDZlMWNkNTkxMDFkNTA5ZjQ5MmQxYTIwMzY3NGFiM2JiMDRhZGRkOGRjY2FlMTYwZTA2NWE5MWEyMzZmNmUiLCJpYXQiOjE1MTA1MTY1NjEsIm5iZiI6MTUxMDUxNjU2MSwiZXhwIjoxNTEzMTA4NTYxLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.FRkRl_2xMGx8t5qahMQxIx8B0vytxb_jJrHWzd9nFEV5MXju4XsLlaqHxuOheyEb1S6oE2Y3QEaqDG_jCpTl8h8oRdl-OPLhUS8xpQvuC_smRphGwBWHS9zahoUepkTyeWCWsMWUv3mn-2fpLFOo3E2hFrvXUQWYc5CgUF1aFJxfVnBYgTCW3qrVoUYZK6YYbf0c9NVT6oRsJXmwCkp49zer8d5wL6rXaHjlXZ1MfRxmjJp-2ZutJmpfyeh8aXSqJwvVNvwb4dPqdidTYy6pTosYDm9XDTVn9aKFqkWEq2zYyo6Q73T1xCOxfp39oy5Ysrx1kFXfNyxm7z9X7E0SnI2iU-R8stWuYpDVBkXhTGka0ZYU2kUM2n5TwjPQ_oWbtPj1xQox26ZBl7ix_IsU8VlfIUEQFUkZN_l8nCRxEwMvLiymP-0z_XP0NiIttBKRLfh9HGBOIAcHhR_VXYlFT90420NILecY7750H7tUM2KDXIuCCuriD0AAs1btiDjJ-PC-CGVdQdHI9Bl3wEPbPkyddN9x3bvMWIXpIxycjFs1Z-k0kd7ANfsjg3qRZj-T_WOHiHVwCKsP9mRnQEKOzlGJOMhjTwvC-ysgYgRMfzeoLO0rpp6ApfKj0sp8QDyCUAcj8xgKZe04wyPMtI0gC42Zek7-TFqWGJT4gRqejTs",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "new_name",
+							"value": "eto_ya.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/1/file/10",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"1",
+						"file",
+						"10"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "58b2ee62-7628-4800-af50-f02db5f1fec1",
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "new_name",
+									"value": "eto_ya.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/file/1",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"file",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:21:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=99",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "229",
+					"body": "{\"status\":true,\"message\":\"File was successfully edited\"}"
+				}
+			]
+		},
+		{
+			"name": "Delete file by id",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMWI4N2FkNjI4NGEyZmY2NDk0ZjlhYTJjMjYzY2E2YjYxNDU0YTgzYzE1ZDIwMGNmMDVjZmUwNGFiNWQ3YzlhMmNiYWYzMDFkMzRlOGE2In0.eyJhdWQiOiIyIiwianRpIjoiY2UxYjg3YWQ2Mjg0YTJmZjY0OTRmOWFhMmMyNjNjYTZiNjE0NTRhODNjMTVkMjAwY2YwNWNmZTA0YWI1ZDdjOWEyY2JhZjMwMWQzNGU4YTYiLCJpYXQiOjE1NDg3NzY3NjEsIm5iZiI6MTU0ODc3Njc2MSwiZXhwIjoxNTQ5MzgxNTYwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hZBA9rmMZ1_XnYO_SCA-lBmfQorS3FhS0v7bPUG5vZP0QX2yRPVVi0NKEusV9OQ1PAApI3PMIek6GU4Q5_CbAIEsidISdmAZlKao8J5QCXOKrgFqqrfqRTLN3Stam9UtZ7vp85JEeIOu-iYCsoQLiGeh4iI7_t-AwvGvTG6MVYKY7feiNXzrwjaEsMbNWmD_nWWveQ9TDhnXESFYtP0mobwXUk60lwggTeCvHw0TqfqJq_gZj6BH1m5JSTE1FYJrrn_WJrJ_Avg4Of2h0-qPTa2acUqe5nk-LTPTVlt1aCp2mgfCJEeu7xZAZ98VYHeeUF7IX2zZM6cAqsoubA6FPyzoK0TcdmPuLs-nicD5V32fzw9S4a8J8qfle7Zm-KcJmORmXh4ftbXOWYlYNYzitT5efXfnSsAOx7C6H30W62UsrmU6CQnBf-ZwkvQ3qE1ERcWNaSd-gM0dDI2204fA35ZtiFSqAUcZmZjQ3xJP3kGZKVqCY3PxsuQmlbRLB1KSllNTOCPjIlZq-XqU__0Cu3MbDmGCrqUPKKVicKag-St8jLxdekPjBdpgoJhNK0AGQZxD7A3S7Lfb9OCbAgO_qqLVrsIt5RPhUc2U43YTpNWjs9vxk8Fj8P_n-WdE8ynUrfYL24tzDtKMQm_yJH__W81G4hgdihlXcOyw-zVahS0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"type": "any"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://onpu-life/api/v1/subject/5/file/1",
+					"protocol": "http",
+					"host": [
+						"onpu-life"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"5",
+						"file",
+						"1"
+					]
+				},
+				"description": null
+			},
+			"response": [
+				{
+					"id": "fcd27798-46bc-4bff-b9e3-4f76509d16b2",
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://onpu-life/api/v1/subject/2/file/1",
+							"protocol": "http",
+							"host": [
+								"onpu-life"
+							],
+							"path": [
+								"api",
+								"v1",
+								"subject",
+								"2",
+								"file",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Nov 2017 22:21:30 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=10, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": "313",
+					"body": "{\"status\":true,\"message\":\"File was successfully deleted\"}"
+				}
+			]
+		}
+	]
+}

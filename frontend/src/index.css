@@ -1,0 +1,15 @@
+@import-normalize;
+
+td.fit, th.fit {
+    width: 1px;
+    white-space: nowrap;
+}
+
+td.center, th.center {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn:focus, .btn:active {
+    box-shadow: none !important;
+}
